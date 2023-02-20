@@ -40,15 +40,18 @@ class NotesCubit extends Cubit<NotesState> {
 
   List<Note> searchNoteList(String txt) {
     listNotesSearched = [];
-    for (var element in listNotes) {
-      if (element.text.toLowerCase().contains(txt.toLowerCase())) {
-        listNotesSearched.add(element);
+    if (txt.isNotEmpty) {
+      for (var element in listNotes) {
+        if (element.text.toLowerCase().contains(txt.toLowerCase())) {
+          listNotesSearched.add(element);
+        }
       }
+    } else {
+      listNotesSearched = [];
     }
     emit(AllNotesLoadedSuccess(note: listNotesSearched));
     return listNotesSearched;
   }
-
 
   Future<void> updateNote({
     required String id,
