@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:notes/config/routes/app_routes.dart';
 import 'package:notes/core/utils/app_colors.dart';
 import 'package:notes/features/manage_note/presentation/cubit/notes_cubit.dart';
 import 'package:notes/features/manage_note/presentation/cubit/options_cubit.dart';
@@ -14,12 +13,6 @@ class SettingScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Options'),
-        leading: GestureDetector(
-          onTap: () {
-            Navigator.pushReplacementNamed(context, Routes.initialRoute);
-          },
-          child: const Icon(Icons.arrow_back),
-        ),
       ),
       body: ListTile(
         title: Text(

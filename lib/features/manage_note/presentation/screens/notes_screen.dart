@@ -46,7 +46,7 @@ class _NotesScreenState extends State<NotesScreen> {
                 SizedBox(width: 10.w),
                 GestureDetector(
                     onTap: () {
-                       Navigator.pushReplacementNamed(context, Routes.options);
+                      Navigator.pushNamed(context, Routes.options);
                     },
                     child: const Icon(Icons.settings)),
                 SizedBox(width: 10.w),
