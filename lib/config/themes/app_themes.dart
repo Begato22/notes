@@ -14,13 +14,15 @@ ThemeData appTheme() {
     inputDecorationTheme: _inputDecorationTheme(),
     elevatedButtonTheme: _elevatedButtonThemeData(),
     appBarTheme: AppBarTheme(
-        // backgroundColor: Colors.white,
-        elevation: 0,
-        titleTextStyle: TextStyle(
-          color: Colors.white,
-          fontSize: 22.sp,
-        ),
-        iconTheme: IconThemeData(color: AppColors.whiteColor)),
+      // backgroundColor: Colors.white,
+      elevation: 0,
+      titleTextStyle: TextStyle(
+        color: Colors.white,
+        fontSize: 22.sp,
+      ),
+      iconTheme: IconThemeData(color: AppColors.whiteColor),
+      titleSpacing: 0.0.w,
+    ),
   );
 }
 
@@ -96,7 +98,7 @@ ElevatedButtonThemeData _elevatedButtonThemeData() {
       minimumSize: Size(double.infinity, 40.h),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(7.r)),
       elevation: 0,
-      textStyle: TextStyle(fontSize: 16.sp,fontWeight: FontWeight.bold),
+      textStyle: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.bold),
     ),
   );
 }
